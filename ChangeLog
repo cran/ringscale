@@ -1,0 +1,10 @@
+* Released as ringscale_0.1.1 2009-07-30
+	In DESCRIPTION and MANUAL:
+		changed
+			"Implementation of the methods presented in"
+		to
+			"Implementation of the "Ringscale" method as proposed in"
+		for a better understanding of the title "ringscale"
+
+* Released as ringscale_0.1 2009-07-30
+	Basic version of ringscale, first release.
