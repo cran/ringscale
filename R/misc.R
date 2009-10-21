@@ -114,7 +114,13 @@ header.find <- function(header, key) {
 	# find the value for the key 'key' in the
 	# specified FITS header
 	
-	header[2*which(header[((1:length(header)) %% 2) == 1] == key)]
+	index <- (2*which(header[((1:length(header)) %% 2) == 1] == key))[1]
+	if (is.na(index)) {
+		character(1)
+	} else {
+		header[index]
+	}
+	
 }
 
 speckle.Diameter <- function(D = 8.2, lambda = 2.2, pixscale = 0.013270) {

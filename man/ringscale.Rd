@@ -40,7 +40,8 @@
 analyze(filenames = character(0),
 	result.filename = paste(format(Sys.time(),
 	"\%Y-\%m-\%d-\%H\%M\%S"), ".RData", sep = ""),
-	evaluate = TRUE)
+	evaluate = TRUE,
+	header.skip = FALSE)
 evaluate(filename = character(0), support.min = 0.5)
 }
 \arguments{
@@ -48,6 +49,7 @@ evaluate(filename = character(0), support.min = 0.5)
 	\item{result.filename}{Filename of the result of \code{analyze()}.}
 	\item{evaluate}{If \code{TRUE}, \code{evaluate()} is called for the appropriate file just after the
 	analysis finished.}
+	\item{header.skip}{If \code{TRUE}, the FITS-header will not be read out at the beginning of the analysis. You may try this if you encounter performance problems or if you know that your header contains no information which is needed by Ringscale (such as telescope diameter, wavelength et cetera). You will have to enter these by hand then.}
 	\item{filename}{Filename of the result of \code{analyze()} to be evaluated.}
 	\item{support.min}{Minimum support value for which candidates are listed and marked in \code{evaluate()}.}
 }

@@ -1,3 +1,21 @@
+* Released as ringscale_0.1.2 2009-10-21
+	In misc.R
+		function 'header.find' now always returns a character
+		vector of length 1 ("" if key was not found in the header
+		data) - this led to errors in the case of no given FITS headers
+		
+	In ringscale.R
+		added declaration of 'hypotheses.combined' at the beginning of
+		the function 'evaluate' to get rid of the CRAn check note:
+			checking R code for possible problems ... NOTE
+			evaluate: no visible binding for global variable
+			‘hypotheses.combined’
+		
+		added the option to skip reading out FITS header data
+		for the funvtion 'analyze()' via the parameter 'header.skip'
+		
+		some minor bug fixes
+
 * Released as ringscale_0.1.1 2009-07-30
 	In DESCRIPTION and MANUAL:
 		changed
